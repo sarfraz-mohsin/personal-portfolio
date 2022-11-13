@@ -4,6 +4,7 @@ import './header.css';
 const Header = () => {
     /*======================== Toggle Menu ================== */
     const [Toggle, showMenu] = useState(false);
+    const [mode, setMode] = useState(true);
 
 
   return (
@@ -42,6 +43,11 @@ const Header = () => {
                         <a href="#contact" className="nav__link">
                             <i className="uil uil-message nav__icon"></i>Contact
                         </a>
+                    </li>
+                    <li className="nav__item">
+                        <button onClick={() => setMode(!mode)} className="nav__link">
+                            <i class={mode ? 'bx bx-sun' : 'bx bx-moon'  }></i>
+                        </button>
                     </li>
                 </ul>
 
